@@ -83,19 +83,6 @@ body,
   pointer-events: auto;
 }
 
-.menu-wrapper::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
 .menu-wrapper.visible::before {
   opacity: 1;
   pointer-events: auto;
@@ -108,7 +95,7 @@ body,
   padding: 2rem;
   border-radius: 16px;
   color: #333;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transform: translateY(20px);
@@ -198,3 +185,4 @@ body,
     height: 48px;
   }
 }
+

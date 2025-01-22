@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Load a Model with R3F</title>
-</head>
-<body>
+    <style>
+      .menu-wrapper.visible {
+        display: block;
+      }
+      .menu {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
     <div id="root"></div>
-    <script type="module" src="./index.jsx"></script></body>
+
+    <div class="menu-wrapper" id="menuWrapper">
+      <div class="menu">
+        <h1 id="menuTitle">Menu</h1>
+        <p id="menuFact">Here is some text displayed for the camera view.</p>
+        <button id="exitMenuButton">Exit</button>
+      </div>
+    </div>
+    <script type="module" src="./index.jsx"></script>
+  </body>
 </html>
