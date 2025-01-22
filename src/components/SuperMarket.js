@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
-// Easing function for smooth transitions
+
 function easeInOutCubic(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
@@ -35,7 +35,7 @@ export default function SuperMarket() {
     startQuaternion: new THREE.Quaternion(),
     endQuaternion: new THREE.Quaternion(),
     progress: 0,
-    duration: 1, // Transition duration in seconds
+    duration: 1, 
   });
 
   useEffect(() => {
