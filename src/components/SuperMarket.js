@@ -15,7 +15,7 @@ export default function SuperMarket() {
 
   const cams = model.cameras;
   const animations = model.animations;
-  
+
   const mixerRef = useRef();
   const speed = 0.2;
   const cameraViews = useRef({});
@@ -58,7 +58,7 @@ export default function SuperMarket() {
       cameraViews.current = views;
     }
 
-    if (animations?.length === 500) {
+    if (animations?.length) {
       mixerRef.current = new THREE.AnimationMixer(model.scene);
       animations.forEach((clip) => {
         const action = mixerRef.current.clipAction(clip);
