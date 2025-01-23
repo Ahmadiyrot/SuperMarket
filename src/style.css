@@ -66,7 +66,7 @@ body,
 .menu-wrapper {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
   z-index: 1000;
   opacity: 0;
@@ -186,3 +186,127 @@ body,
   }
 }
 
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+  padding: 8px;
+  box-sizing: border-box;
+  z-index: 999;
+  position: relative;
+  top: 2%;
+  left: 83%;
+  border-radius: 10px;
+  background-color: #272727af;
+
+  box-shadow: 10px 10px 19px #3d3d3d, -10px -10px 19px #2b2b2b;
+}
+
+.player-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-info {
+  margin-bottom: 4px;
+}
+
+.song-title {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.artist {
+  font-size: 12px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #ff550081;
+  animation: progress-animation 10s linear infinite;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.play-btn,
+.pause-btn,
+.skip-btn,
+.volume-btn {
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-btn:hover,
+.pause-btn:hover,
+.skip-btn:hover,
+.volume-btn:hover {
+  transform: scale(1.2);
+}
+
+.volume-slider {
+  width: 100px;
+  height: 5px;
+  background-color: #ccc;
+  position: relative;
+  margin-left: 10px;
+}
+
+.volume-slider-bar {
+  height: 100%;
+  background-color: #000000;
+}
+
+.volume-slider-handle {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes progress-animation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

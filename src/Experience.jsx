@@ -10,18 +10,14 @@ export default function Experience() {
 
   return (
     <>
-      <Perf position="top-left" />
+      {/* <Perf position="top-left" /> */}
 
-      <EffectComposer enableNormalPass>
+      {/* <EffectComposer>
         <Bloom intensity={0.6} radius={0.4} threshold={0.2} />
         <Vignette eskil={false} offset={0.3} darkness={0.8} />
+      </EffectComposer> */}
 
-        <DepthOfField focusDistance={10} focalLength={0.03} bokehScale={1.5} />
-        <ToneMapping />
-        <SSAO intensity={1.5} radius={0.3} />
-      </EffectComposer>
-
-      <Environment environmentIntensity={0.5} preset="sunset" background />
+      <Environment environmentIntensity={2.5} preset="night" background />
 
       <SuperMarket />
     </>
